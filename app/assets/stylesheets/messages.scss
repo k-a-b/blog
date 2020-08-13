@@ -1,0 +1,34 @@
+.messages {
+  header.masthead {
+    background: no-repeat center center;
+    background-color: #868e96;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover;
+    background-image: image-url('mess-bg.jpg');
+    margin-bottom: 10px;
+  }
+  .body{
+    width: 90%;
+  }
+  .col-md-6{
+    height: 250px;
+    margin-bottom: 10px;
+  }
+  .row{
+    overflow: hidden;
+  }
+  .card-text{
+    height: 65px;
+    overflow: hidden;
+  }
+  .col-auto{
+    background-image: image-url('mess-ms.jpg');
+  }
+}
+
+.show, .edit {
+  width: 90%;
+  padding: 0px;
+  margin: 0 auto;
+}

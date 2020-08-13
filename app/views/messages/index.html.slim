@@ -1,0 +1,33 @@
+.messages
+  <header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Awesome posts</h1>
+            <span class="subheading">Let go of thoughts</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  .body
+    <div class="row mb-2">
+    - @messages.reverse_each do |message|
+      <div class="col-md-6">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0">#{message.title}</h3>
+            <div class="mb-1 text-muted">#{message.user.name.capitalize}</div>
+            <p class="card-text mb-auto">#{message.content}</p>
+            <a href="#{message_path(message)}" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img width="200" height="250">
+          </div>
+        </div>
+      </div>
+    </div>
+    = paginate @messages

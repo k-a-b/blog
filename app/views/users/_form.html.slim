@@ -1,0 +1,23 @@
+= form_for @user do |f|
+  - if @user.errors.any?
+      h5 = "You have #{pluralize(@user.errors.count, "error")}, user info not updated:"
+      ul
+        - @user.errors.full_messages.each do |message|
+          li = message
+
+  = f.label :name
+  = f.text_field :name, class: 'form-control'
+  br
+  = f.label :email
+  = f.text_field :email, class: 'form-control'
+  br
+  = f.check_box :moderator, class: 'form-check form-check-inline'
+  = f.label :moderator
+  br
+  = f.check_box :banned, class: 'form-check form-check-inline'
+  = f.label :banned
+  br
+  = f.label :password
+  = f.password_field :password, class: 'form-control'
+  br
+  = f.submit

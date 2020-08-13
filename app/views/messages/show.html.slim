@@ -1,0 +1,25 @@
+.show
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 blog-main">
+        <div class="blog-post">
+          <h2 class="blog-post-title">#{@message.title}</h2>
+          <p class="blog-post-meta">#{@message.created_at.strftime("%m/%d/%Y")} <a href="#{user_path}">#{@message.user.name.capitalize}</a></p>
+          <hr>
+          <p>#{@message.content}</p>
+          <h6> Comments</h6>
+          -  @comments.each do |comment|
+            <blockquote>
+            <p><strong>#{comment.user.name}</strong></p>
+            <p>#{comment.content}</p>
+            </blockquote>
+          = paginate @comments
+          <nav class="blog-pagination">
+            <a class="btn btn-outline-dark" href="#{edit_message_path(@message)}">Edit message</a>
+            <a class="btn btn-outline-dark" href="#{messages_path}">Back to messages</a>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </div>
