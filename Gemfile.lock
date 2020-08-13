@@ -152,8 +152,9 @@ GEM
       byebug (~> 10.0)
       pry (~> 0.10)
     public_suffix (3.0.3)
-    puma (3.12.0)
-    rack (2.2.3)
+    puma (3.12.6)
+    rack (2.0.5)
+
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.1)
@@ -289,7 +290,7 @@ DEPENDENCIES
   lorem (~> 0.1.2)
   pg (>= 0.18, < 2.0)
   pry-byebug
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 5.2.1)
   rspec-rails
   sass-rails (~> 5.0)
